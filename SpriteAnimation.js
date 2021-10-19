@@ -2,7 +2,7 @@ import img from "./img.js";
 
 export default class SpriteAnimation {
   images = [];
-  constructor(fileNameTemplate, numberOfImages, timerCount, state,stopAtEnd) {
+  constructor(fileNameTemplate, numberOfImages, timerCount, state, stopAtEnd) {
     for (let i = 1; i <= numberOfImages; i++) {
       const image = img(fileNameTemplate.replace("?", i));
       this.images.push(image);
@@ -10,8 +10,8 @@ export default class SpriteAnimation {
     this.timerCount = timerCount;
     this.timerCountDefault = this.timerCount;
     this.imageIndex = 0;
-		this.state = state;
-		this.stopAtEnd = stopAtEnd;
+    this.state = state;
+    this.stopAtEnd = stopAtEnd;
   }
 
   isFor(state) {
@@ -36,9 +36,9 @@ export default class SpriteAnimation {
         this.imageIndex = 0;
       }
     }
-	}
-	
-	#shouldStop() {
-		return this.stopAtEnd && this.imageIndex === this.images.length - 1;
-	}
+  }
+
+  #shouldStop() {
+    return this.stopAtEnd && this.imageIndex === this.images.length - 1;
+  }
 }

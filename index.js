@@ -10,8 +10,8 @@ const background = img("BG.png");
 const player = new Player();
 
 function game() {
-	ctx.drawImage(background, 0, 0, 2000, 1143, 0, 0, 2000 / 1.5, 1143);
-	player.draw(ctx);
-};
+  ctx.drawImage(background, 0, 0, 2000, 1143, 0, 0, 2000 / 1.5, 1143);
+  player.draw(ctx);
+}
 
 setInterval(game, 1000 / 60);

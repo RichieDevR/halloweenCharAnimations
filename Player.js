@@ -21,10 +21,10 @@ export default class player {
 
     if (this.state == PlayerStates.slide) {
       y = 210;
-		}
-		if (this.state == PlayerStates.jump) {
-			y=-200
-		}
+    }
+    if (this.state == PlayerStates.jump) {
+      y = -200;
+    }
 
     ctx.drawImage(image, x, y);
   }
@@ -110,11 +110,11 @@ export default class player {
         break;
       case "KeyD":
         this.deadPressed = true;
-				break;
-			case "KeyR":
-				this.deadPressed = false;
-				this.deadAnimation.reset();
-				break;
+        break;
+      case "KeyR":
+        this.deadPressed = false;
+        this.deadAnimation.reset();
+        break;
     }
   };
 
